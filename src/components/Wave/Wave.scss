@@ -1,0 +1,73 @@
+.wave {
+  &__wrapper {
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+  }
+
+  &__.wrapperInner {
+    position: absolute;
+    width: 100%;
+    overflow: hidden;
+    height: 100%;
+    bottom: -1px;
+  }
+
+  &__item {
+    position: absolute;
+    left: 0;
+    width: 200%;
+    height: 100%;
+    background-repeat: repeat no-repeat;
+    background-position: 0 bottom;
+    transform-origin: center bottom;
+  }
+
+  &__top {
+    background-size: 50% 100px;
+    background-image: url('http://front-end-noobs.com/jecko/img/wave-top.png')
+  }
+
+  &__animation .wave__top {
+    animation: move-wave 3s;
+    -webkit-animation: move-wave 3s;
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
+  }
+
+  &__middle {
+    background-size: 50% 120px;
+    background-image: url('http://front-end-noobs.com/jecko/img/wave-mid.png')
+  }
+
+  &__animation .wave__middle {
+    animation: move_wave 10s linear infinite;
+  }
+
+  &__bottom {
+    background-size: 50% 100px;
+    background-image: url('http://front-end-noobs.com/jecko/img/wave-bot.png')
+  }
+
+  &__animation .wave__bottom {
+    animation: move_wave 15s linear infinite;
+  }
+}
+
+.bgTop {
+  z-index: -3;
+  opacity: 0.5;
+}
+
+.bgMiddle {
+  z-index: -2;
+  opacity: 0.75;
+}
+
+.bgBottom {
+  z-index: -1;
+}

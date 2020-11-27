@@ -1,0 +1,38 @@
+option {
+  color: black;
+  border-radius: 20px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: grey;
+  }
+}
+
+select {
+  width: 228px;
+  height: 40px;
+  padding: 8px 10px;
+  margin-bottom: 20px;
+
+  background: #FFFFFF;
+  border: 1px solid $grey;
+  border-radius: 3px;
+
+  color: $grey;
+  font-family: Helvetica;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 14px;
+
+  &:hover {
+    border-color: $blue;
+    color: $blue;
+  }
+
+  &:focus {
+    border-color: $blue;
+    color: $blue;
+    outline: none;
+  }
+}

@@ -1,24 +1,23 @@
 import React from 'react';
 import './App.scss';
-import { Switch, Link, Route } from 'react-router-dom';
+import { Form } from './components/Form';
+import { Wave } from './components/Wave';
+
+export const initialUser = {
+  fullName: '',
+  email: '',
+  message: '',
+};
+
+export const initialErrors = {
+  fullName: 'start',
+  email: 'start',
+  message: 'start',
+};
 
 export const App = () => (
   <div>
-    React starter pack
-    <div>
-      <nav className="nav">
-        <Link to="/">Home</Link>
-        <Link to="/users">Users</Link>
-      </nav>
-
-      <Switch>
-        <Route path="/users">
-          <div>Users page</div>
-        </Route>
-        <Route path="/">
-          <div>Home page</div>
-        </Route>
-      </Switch>
-    </div>
+    <Wave />
+    <Form initialInputs={initialUser} initialErrors={initialErrors} />
   </div>
 );
