@@ -1,0 +1,32 @@
+button {
+  display: flex;
+  align-items: center;
+  padding: 7px 20px;
+
+  position: absolute;
+  width: 83px;
+  height: 40px;
+
+  background: #FFFFFF;
+  border: 1px solid $grey;
+  box-sizing: border-box;
+  border-radius: 3px;
+
+  font-family: Helvetica;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  color: $dark;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+button.disabled {
+  background-color: $grey;
+  color: #fff;
+  border: none;
+}
